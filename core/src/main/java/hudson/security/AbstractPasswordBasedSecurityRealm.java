@@ -93,6 +93,7 @@ public abstract class AbstractPasswordBasedSecurityRealm extends SecurityRealm {
     }
 
     private UserDetails doAuthenticate(String username, String password) throws AuthenticationException {
+        //todo for shiyue  deencode password
         try {
             UserDetails user = authenticate2(username, password);
             SecurityListener.fireAuthenticated2(user);
